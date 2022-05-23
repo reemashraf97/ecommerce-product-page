@@ -1,0 +1,175 @@
+@import 'colors';
+
+.header {
+    width: 80%;
+    margin: 2% 10% 11px 10%;
+    display: grid;
+    grid-template-columns: repeat(12, auto);
+    grid-template-rows: auto;
+    
+    .logo {
+        grid-column: 1 / span 2;
+        margin: 15px 0px 0px 5px;
+    }
+    .inner-header {
+        grid-column: auto;
+        font-weight: 400;
+        opacity: 75%;
+        text-decoration: none;
+        margin: 15px 0px 0px 5px;
+        //text-underline-offset: 2%;
+
+        &:hover {
+            text-decoration: underline solid $orange 4px;
+            text-underline-offset: 30px;
+        }
+    }
+    .shopping-cart {
+        grid-column: 11 / span 1;
+        width: 0%;
+        height: 0%;
+        text-align: right;
+        margin: 15px 0px 0px 5px;
+        position: relative;
+        display: inline-block;
+        &:hover {
+            cursor: pointer;
+        }
+        &:before {
+            content: attr(data);
+            font-size: 12px;
+            font-weight: 600;
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: $orange;
+            padding: 0px 3px;
+            height: 15px;
+            min-width: 15px;
+            color: $white;
+            text-align: center;
+            border-radius: 24px;
+            -webkit-border-radius: 24px;
+            -moz-border-radius: 24px;
+            -ms-border-radius: 24px;
+            -o-border-radius: 24px;
+}
+    }
+    .profile-picture {
+        grid-column: 12 / span 1;
+        text-align: right;
+        width: 0%;
+        height: 0%;
+        img {
+            height: 45px;
+            width: 45px;
+            margin: 0px 0px 5px 0px;
+            &:hover {
+                border: 2px solid $orange;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+}
+        }
+    }
+}
+hr {
+    width: 80%;
+    margin: 0% 10% 4% 10%;
+    border: 0.5px solid $light-grayish-blue;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    margin-left: 250px;
+    margin-top: -70px;
+    position: absolute;
+    background-color: $white;
+    width: 350px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    z-index: 1;
+    .item-header
+    {
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+        margin: 10px 20px;
+        font-size: 20px;
+    }
+    .inner-content {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-template-rows: repeat(2, auto);
+    .item-image{
+        grid-column: 1 / span 1;
+        grid-row: auto;
+        height: 50px;
+        width: 50px;
+        margin-top: 10px;
+        margin-left: 20px;
+        margin-right: 10px;
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+    }
+    .item-name {
+        grid-column: 2 / span 4;
+        grid-row: auto;
+        padding-top: 10px;
+        font-weight: 200;
+        font-size: 18px;
+    }
+    .item-name2 {
+        grid-column: 1 / span 6;
+        padding: 20px;
+        font-weight: bold;
+        margin: 20px;
+        text-align: center;
+        font-size: 20px; 
+        color: $grayish-blue;
+    }
+    .item-price {
+        font-weight: 700;
+    }
+    .item-icon {
+        grid-column: 6 / span 1;
+        grid-row: auto;
+        margin: 25px 10px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .item-button {
+        grid-column: 1 / span 6;
+        grid-row: auto;
+        font-weight: bold;
+        width: 80%;
+        height: 40px;
+        margin: 5% 10%;
+        background-color: $orange;
+        color: $white;
+        border: none;
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+}
+.show {
+    display: block;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200&family=Cinzel&family=Cormorant+Garamond:wght@300&family=Kumbh+Sans:wght@400;700&family=Rubik:wght@300&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+</head>
+<body>
+  <header class="header">
+    <img class="logo" src="./images/logo.svg">
+    <a class="inner-header" href="#">Collections</a>
+    <a class="inner-header" href="#">Men</a>
+    <a class="inner-header" href="#">Women</a>
+    <a class="inner-header" href="#">About</a>
+    <a class="inner-header" href="#">Contact</a>
+    <button class="shopping-cart" id="shopping-cart" data="0" onclick="displayShoppingCart()"><img src="./images/icon-cart.svg" /></button>
+    <a class="profile-picture" href="#"><img src="./images/image-avatar.png"></a>
+  </header>
+  <hr>
+  
+  <main class="container">
+    <div class="container-1">
+      <img class= "img" id="img" src="./images/image-product-1.jpg">
+      <img class= "img-1" src="./images/image-product-1.jpg" onclick="changeImage(this)">
+      <img class= "img-2" src="./images/image-product-2.jpg" onclick="changeImage(this)">
+      <img class= "img-3" src="./images/image-product-3.jpg" onclick="changeImage(this)">
+      <img class= "img-4" src="./images/image-product-4.jpg" onclick="changeImage(this)">
+    </div>
+    <div class="container-2">
+      <div class="header-2">Sneaker company</div>
+      <div class="title">Fall Limited Edition Sneakers</div>
+      <div class="para">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+      durable rubber outer sole, they’ll withstand everything the weather can offer.
+      </div>
+      <div class="price">$125.00
+        <div class="discount">50%</div>
+      </div>
+      <div class="before-discount">$250.00</div>
+
+      <form>
+        <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+        <input id="number" value="0" />
+        <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+        <button class="button" id="button" onclick="addToCart()"><img class="cart-img" src="./images/icons8-shopping-trolley-64.png" /> Add to cart</button>
+      </form>
+          
+    </div>
+    
+    <div class="dropdown">
+      <div id="myDropdown" class="dropdown-content">
+        <h1 class="item-header">Cart</h1>
+        <hr>
+        <div class="inner-content">
+        <img class="item-image" alt="image of product" src="./images/image-product-1.jpg" />
+        <div class="item-name">Fall Limited Edition Sneakers
+          <div class="item-price" id="item-price"></div>
+        </div>
+        <img class="item-icon" alt="Icon" src="./images/icon-delete.svg" />
+        <button class="item-button">Checkout</button>
+        </div> 
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <div id="myDropdown-2" class="dropdown-content">
+        <h1 class="item-header">Cart</h1>
+        <hr>
+        <div class="inner-content">
+        <div class="item-name2">Your cart is empty.</div>
+        </div> 
+      </div>
+    </div>
+
+</main>
+
+</body>
+<script src="./javaScript/javaScript.js"></script>
+</html>
